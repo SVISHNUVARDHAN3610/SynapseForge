@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Editable Package",
+      "type": "shell",
+      "command": "pip install -e '.[dev]'",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint & Typecheck (Ruff + Mypy)",
+      "type": "shell",
+      "command": "ruff check synapseforge tests && mypy synapseforge",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Local Test Suite",
+      "type": "shell",
+      "command": "pytest -v tests",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
